@@ -1,37 +1,38 @@
-import { contactCopy, socialLinks } from '../data/content';
-import { IconMail } from '../components/icons';
+import { contactChannels } from '../data/content';
 
 export const Contact = () => {
   return (
     <section id="contact" className="mx-auto mt-24 max-w-6xl px-6">
-      <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="space-y-4">
           <p className="badge">Contact</p>
-          <h2 className="section-title">{contactCopy.heading}</h2>
-          <p className="section-subtitle">{contactCopy.body}</p>
-          <div className="rounded-3xl border border-primary-200/80 bg-primary-50/70 p-6 text-sm text-primary-900 shadow-sm dark:border-primary-500/40 dark:bg-primary-500/10 dark:text-primary-100">
-            <p className="font-semibold">Prefer email?</p>
-            <p className="mt-1">Reach Kingsley directly at</p>
-            <a href={socialLinks.email} className="mt-2 inline-flex items-center gap-2 font-semibold">
-              <IconMail className="h-4 w-4" /> contact@iamkay.eu
-            </a>
-          </div>
+          <h2 className="section-title">Ready to co-create your next chapter?</h2>
+          <p className="section-subtitle">
+            Share a few details about your project and Kay will follow up within two business days with next steps and a call
+            invitation.
+          </p>
+
+          <dl className="mt-8 space-y-3">
+            {contactChannels.map((channel) => (
+              <div key={channel.label} className="flex flex-col gap-1">
+                <dt className="text-xs font-semibold uppercase tracking-[0.3em] text-base-400 dark:text-base-500">
+                  {channel.label}
+                </dt>
+                <dd>
+                  <a href={channel.href} className="text-lg font-semibold text-base-900 dark:text-white">
+                    {channel.value}
+                  </a>
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
         <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          action="/?submitted=true"
           className="glass-card space-y-6"
+          method="POST"
+          action="https://formspree.io/f/mvononrq"
         >
-          <input type="hidden" name="form-name" value="contact" />
-          <p className="hidden">
-            <label>
-              Don’t fill this out if you’re human: <input name="bot-field" />
-            </label>
-          </p>
           <div>
             <label htmlFor="name" className="block text-sm font-semibold text-base-600 dark:text-base-200">
               Name
@@ -40,7 +41,6 @@ export const Contact = () => {
               id="name"
               name="name"
               required
-              autoComplete="name"
               className="mt-2 w-full rounded-2xl border border-base-200/80 bg-white/80 px-4 py-3 text-base shadow-sm transition focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-200 dark:border-white/10 dark:bg-white/10"
             />
           </div>
@@ -53,18 +53,27 @@ export const Contact = () => {
               type="email"
               name="email"
               required
-              autoComplete="email"
+              className="mt-2 w-full rounded-2xl border border-base-200/80 bg-white/80 px-4 py-3 text-base shadow-sm transition focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-200 dark:border-white/10 dark:bg-white/10"
+            />
+          </div>
+          <div>
+            <label htmlFor="company" className="block text-sm font-semibold text-base-600 dark:text-base-200">
+              Company
+            </label>
+            <input
+              id="company"
+              name="company"
               className="mt-2 w-full rounded-2xl border border-base-200/80 bg-white/80 px-4 py-3 text-base shadow-sm transition focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-200 dark:border-white/10 dark:bg-white/10"
             />
           </div>
           <div>
             <label htmlFor="message" className="block text-sm font-semibold text-base-600 dark:text-base-200">
-              Message
+              Project details
             </label>
             <textarea
               id="message"
               name="message"
-              rows={5}
+              rows={4}
               required
               className="mt-2 w-full rounded-2xl border border-base-200/80 bg-white/80 px-4 py-3 text-base shadow-sm transition focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-200 dark:border-white/10 dark:bg-white/10"
             />

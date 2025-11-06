@@ -1,23 +1,6 @@
-# iamkay.eu – Kingsley Kanu Portfolio
+# iamkay
 
-A professional developer website for **Kingsley Kanu**, built as a React + TypeScript single-page application that surfaces live GitHub repositories, curated case studies, and a Netlify-powered contact flow.
-
-## Stack
-
-- [React](https://react.dev/) (Vite) + TypeScript
-- [Redux Toolkit](https://redux-toolkit.js.org/) for UI state (theme + GitHub feed lifecycle)
-- [React Router](https://reactrouter.com/) for client-side routing and anchor navigation
-- [Tailwind CSS](https://tailwindcss.com/) for the component design system
-- Netlify static hosting and Netlify Forms
-
-## Features
-
-- Hero introducing Kingsley with GitHub avatar and CTA buttons for projects, contact, and CV download.
-- About, Skills, Projects, and Contact sections defined in the Software Requirements Specification (SRS v1.2).
-- GitHub REST API integration (via Redux async thunk) that lists the six most recently updated public repositories, with graceful rate-limit messaging.
-- Flagship case-study grid highlighting AuthApp, SyncSkilled, Portfolio Core, InvoiceLink Mini, QuickLinker, API Visualizer, and Form Validator Pro.
-- Netlify-friendly contact form with honeypot spam protection and mailto fallback.
-- Theme toggle with persisted preference and support for system colour scheme detection.
+Modern portfolio web application for software developer Kay Anderson, built with React, TypeScript, Redux Toolkit, React Router, and Tailwind CSS.
 
 ## Getting started
 
@@ -27,53 +10,29 @@ A professional developer website for **Kingsley Kanu**, built as a React + TypeS
    npm install
    ```
 
-2. Set the GitHub username used for the live projects feed (defaults to `kingsleykanu`):
-
-   ```bash
-   echo "VITE_GITHUB_USER=kingsleykanu" > .env.local
-   ```
-
-   Any value defined in `.env`, `.env.local`, or Netlify environment variables will be picked up at build time.
-
-3. Run the development server:
+2. Start the local development server:
 
    ```bash
    npm run dev
    ```
 
-   Visit <http://localhost:5173> to view the site.
+   The site will be available at <http://localhost:5173>.
 
-4. Create a production build:
+3. Create a production build:
 
    ```bash
    npm run build
    ```
 
-   The output is generated in `dist/` and is suitable for Netlify’s static hosting.
+## Architecture
 
-## Deployment notes
+- **React + TypeScript** power the component-based experience with strict typing for maintainability.
+- **Redux Toolkit** manages theme state with persistence and system preference detection.
+- **React Router** lays the groundwork for future multi-page expansion while supporting anchor navigation today.
+- **Tailwind CSS** provides a modern, responsive visual system with glassmorphism-inspired surfaces and gradients.
 
-- **Netlify configuration**
-  - Build command: `npm run build`
-  - Publish directory: `dist`
-  - Environment variables: `VITE_GITHUB_USER=kingsleykanu`
-- Enable Netlify Forms to capture submissions from the `<form name="contact">` element (honeypot included).
-- Custom domain: configure DNS for `iamkay.eu` to point to the generated Netlify site.
+## Features
 
-## Accessibility & performance
-
-- Semantic headings, labelled form fields, and focus outlines adhere to WCAG 2.1 AA targets.
-- Responsive layout tested across mobile, tablet, and desktop breakpoints using Tailwind’s utility system.
-- No client secrets are exposed; GitHub API calls use the public REST endpoints.
-
-## Scripts
-
-| Command         | Description                         |
-| --------------- | ----------------------------------- |
-| `npm run dev`   | Start the Vite dev server.          |
-| `npm run build` | Type-check and generate production. |
-| `npm run preview` | Preview the production build locally. |
-
-## License
-
-All rights reserved © Kingsley Kanu.
+- Gradient hero, services spotlight, process walkthrough, project case studies, testimonials, and a contact form.
+- Accessible navigation with responsive mobile menu, sticky header, and theme toggle.
+- Tailored contact section featuring Formspree integration and quick links for calendaring and social touchpoints.
