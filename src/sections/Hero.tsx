@@ -1,60 +1,65 @@
-import { IconArrowDown } from '../components/icons';
-import { metrics } from '../data/content';
+import { heroContent, socialLinks } from '../data/content';
 import { Button } from '../components/Button';
+import { IconArrowDown, IconDownload, IconGithub, IconMail } from '../components/icons';
 
 export const Hero = () => {
+  const { badge, name, title, headline, description, avatarUrl, avatarAlt, ctas } = heroContent;
+  const sizedAvatar = avatarUrl.includes('?') ? `${avatarUrl}&size=320` : `${avatarUrl}?size=320`;
+
   return (
-    <section className="relative overflow-hidden pt-28" id="hero">
-      <div className="absolute inset-0 -z-10 bg-hero-gradient" />
+    <section id="hero" className="relative overflow-hidden pt-28">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary-100/70 via-white to-primary-50/60 dark:from-base-800 dark:via-base-900 dark:to-base-950" />
       <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6 pb-24">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-          <div className="space-y-8">
-            <span className="badge w-fit">Fractional CTO & Product Partner</span>
+          <div className="space-y-7">
+            <span className="badge">{badge}</span>
             <h1 className="text-4xl font-semibold tracking-tight text-base-900 dark:text-white sm:text-5xl lg:text-6xl">
-              I help teams ship confident software that customers love.
+              {headline}
             </h1>
-            <p className="max-w-2xl text-lg text-base-700 dark:text-base-200">
-              Kay Anderson is a senior software engineer and product strategist partnering with startups and scale-ups to
-              accelerate delivery, modernize platforms, and build resilient engineering cultures.
-            </p>
+            <p className="text-lg text-base-700 dark:text-base-200">{description}</p>
             <div className="flex flex-wrap items-center gap-4">
-              <Button icon={<IconArrowDown className="h-4 w-4" />} onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
-                Explore services
+              <Button href={ctas.projects.href} icon={<IconArrowDown className="h-4 w-4" />}>
+                {ctas.projects.label}
+              </Button>
+              <Button href={ctas.contact.href} variant="ghost" icon={<IconMail className="h-4 w-4" />}>
+                {ctas.contact.label}
               </Button>
               <Button
+                href={ctas.cv.href}
                 variant="ghost"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                icon={<IconDownload className="h-4 w-4" />}
+                target={ctas.cv.target}
+                rel={ctas.cv.rel}
               >
-                Let’s talk
+                {ctas.cv.label}
               </Button>
             </div>
+            <div className="flex flex-wrap items-center gap-4 pt-4 text-sm font-semibold text-base-600 dark:text-base-300">
+              <span>{name}</span>
+              <span className="hidden h-1 w-1 rounded-full bg-primary-500 sm:inline-block" />
+              <span className="hidden sm:inline">{title}</span>
+              <a href={socialLinks.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2">
+                <IconGithub className="h-4 w-4" />
+                GitHub
+              </a>
+            </div>
           </div>
-          <div className="glass-card relative overflow-hidden">
-            <div className="absolute -right-20 -top-16 h-52 w-52 rounded-full bg-primary-200/60 blur-3xl" />
-            <div className="absolute -bottom-12 left-6 h-52 w-52 rounded-full bg-primary-400/40 blur-3xl" />
-            <div className="relative space-y-6">
-              <h2 className="text-sm font-semibold uppercase tracking-[0.3em] text-base-500 dark:text-base-300">
-                Trusted by teams at
-              </h2>
-              <div className="grid grid-cols-2 gap-6 text-base font-semibold text-base-700 dark:text-base-200 sm:grid-cols-3">
-                {['Northstar', 'Brightwell', 'Guilded', 'Metricly', 'Orbit', 'Rally'].map((name) => (
-                  <div key={name} className="rounded-2xl border border-white/50 bg-white/60 px-4 py-3 text-center backdrop-blur dark:border-white/10 dark:bg-white/10">
-                    {name}
-                  </div>
-                ))}
+          <div className="relative flex justify-center">
+            <div className="glass-card relative flex max-w-md flex-col items-center gap-4 p-10 text-center">
+              <div className="absolute -right-10 -top-10 h-44 w-44 rounded-full bg-primary-200/50 blur-3xl" />
+              <div className="absolute -bottom-12 left-12 h-40 w-40 rounded-full bg-primary-300/40 blur-3xl" />
+              <img
+                src={sizedAvatar}
+                alt={avatarAlt}
+                className="relative h-40 w-40 rounded-full border-4 border-white object-cover shadow-lg dark:border-base-800"
+              />
+              <div>
+                <p className="text-lg font-semibold text-base-900 dark:text-white">{name}</p>
+                <p className="text-sm text-base-600 dark:text-base-300">{title}</p>
               </div>
             </div>
           </div>
         </div>
-
-        <dl className="grid gap-6 rounded-3xl border border-white/30 bg-white/70 p-6 shadow-card backdrop-blur dark:border-white/10 dark:bg-white/5 sm:grid-cols-2 lg:grid-cols-4">
-          {metrics.map((metric) => (
-            <div key={metric.label} className="space-y-2">
-              <dt className="text-sm uppercase tracking-[0.25em] text-base-500 dark:text-base-300">{metric.label}</dt>
-              <dd className="text-3xl font-semibold text-base-900 dark:text-white">{metric.value}</dd>
-            </div>
-          ))}
-        </dl>
       </div>
     </section>
   );

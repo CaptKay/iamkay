@@ -1,14 +1,14 @@
 import { aboutContent } from '../data/content';
 
 export const About = () => {
-  const { summary, highlights } = aboutContent;
+  const { badge, title, summary, highlights } = aboutContent;
 
   return (
     <section id="about" className="mx-auto mt-24 max-w-6xl px-6">
       <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
         <div className="space-y-4">
-          <p className="badge">About</p>
-          <h2 className="section-title">Collaborative engineering leadership</h2>
+          <p className="badge">{badge}</p>
+          <h2 className="section-title">{title}</h2>
           <p className="section-subtitle">{summary}</p>
         </div>
         <div className="glass-card grid gap-6">

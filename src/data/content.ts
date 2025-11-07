@@ -1,134 +1,212 @@
-export const navLinks = [
-  { label: 'Services', path: '/#services' },
-  { label: 'Process', path: '/#process' },
-  { label: 'Projects', path: '/#projects' },
-  { label: 'Testimonials', path: '/#testimonials' },
-  { label: 'Contact', path: '/#contact' }
-];
+import document from '../../docs/site-content.json';
 
-export const metrics = [
-  { label: 'Products shipped', value: '25+' },
-  { label: 'Teams unlocked', value: '18' },
-  { label: 'Years delivering', value: '12' },
-  { label: 'Avg. NPS', value: '9.4/10' }
-];
+export type SectionLink = {
+  label: string;
+  path: string;
+};
 
-export const services = [
-  {
-    title: 'Product Engineering',
-    description:
-      'Build, iterate, and scale web platforms with performant, resilient architecture and a strong developer experience.',
-    deliverables: ['Full-stack feature squads', 'Design systems & component libraries', 'Quality strategy & observability']
-  },
-  {
-    title: 'Technical Strategy',
-    description:
-      'Clarify roadmaps, modernize stacks, and align decision-making through architecture reviews and pragmatic governance.',
-    deliverables: ['Architecture audits', 'Migration playbooks', 'Platform capability mapping']
-  },
-  {
-    title: 'Platform Engineering',
-    description:
-      'Accelerate shipping velocity with robust CI/CD, cloud-native infrastructure, and security-forward tooling.',
-    deliverables: ['Infrastructure blueprints', 'DevOps enablement', 'Secure delivery pipelines']
-  },
-  {
-    title: 'Developer Experience',
-    description:
-      'Build cultures of continuous improvement with onboarding pathways, documentation, and mentoring programs.',
-    deliverables: ['DX assessments', 'Knowledge bases', 'Mentorship frameworks']
-  }
-];
+export type HeroCta = {
+  label: string;
+  href: string;
+  target?: string;
+  rel?: string;
+};
 
-export const processPhases = [
-  {
-    title: 'Discover & Align',
-    summary:
-      'Facilitated workshops and stakeholder interviews clarify success metrics, constraints, and the problem narrative.',
-    outcomes: ['Shared roadmap & OKRs', 'Risk register & guardrails', 'User journey models']
-  },
-  {
-    title: 'Design & Validate',
-    summary:
-      'We co-design solutions backed by prototypes and measurable hypotheses validated with stakeholders and users.',
-    outcomes: ['Architectural decision records', 'Prototype sprints', 'Validation scorecards']
-  },
-  {
-    title: 'Build & Launch',
-    summary:
-      'Hands-on delivery teams pair with in-house engineers to ship incrementally with a focus on observability and quality.',
-    outcomes: ['Implementation playbooks', 'Automated quality gates', 'Progress telemetry dashboards']
-  },
-  {
-    title: 'Enable & Grow',
-    summary:
-      'Post-launch, we institutionalize new capabilities with documentation, training, and operational excellence practices.',
-    outcomes: ['Runbooks & KPIs', 'Capability uplift programs', 'Retrospective cadences']
-  }
-];
+export type Highlight = {
+  label: string;
+  value: string;
+};
 
-export const projects = [
-  {
-    company: 'Northstar Fintech',
-    year: '2023',
-    impact: 'Increased conversion 34% by unifying onboarding across web & mobile.',
-    stack: ['React', 'Node', 'GraphQL', 'AWS'],
-    description:
-      'Led a cross-functional pod to consolidate the customer onboarding experience, shipping iterative releases that improved sign-up completion and reduced compliance review times by 22%. '
-  },
-  {
-    company: 'Brightwell Health',
-    year: '2022',
-    impact: 'Reduced care team coordination time by 45% with a unified clinician console.',
-    stack: ['TypeScript', 'Next.js', 'PostgreSQL', 'Azure'],
-    description:
-      'Architected a modular platform bridging scheduling, telehealth, and patient insights. Introduced real-time care plans and event-driven integrations scaling to 2M patients.'
-  },
-  {
-    company: 'Guilded SaaS',
-    year: '2021',
-    impact: 'Achieved 99.95% uptime and 60% faster release cadence with platform uplift.',
-    stack: ['Kubernetes', 'Go', 'Terraform', 'GCP'],
-    description:
-      'Partnered with engineering leadership to craft an enablement roadmap across observability, deployment automation, and SRE practices. Mentored internal teams to sustain velocity.'
-  }
-];
+export type SkillCategory = {
+  name: string;
+  items: string[];
+};
 
-export const testimonials = [
-  {
-    quote:
-      'Kay helped us unblock a multi-year modernization effort in under six months. Our engineers rave about the clarity and empathy Kay brings to every working session.',
-    name: 'Priya Desai',
-    role: 'VP Engineering · Northstar Fintech'
-  },
-  {
-    quote:
-      'From executive briefings to pairing in the trenches, Kay translated big ideas into measurable wins that resonated with our customers and our board.',
-    name: 'Malik Thompson',
-    role: 'CTO · Brightwell Health'
-  },
-  {
-    quote:
-      'We finally have a shared language for product delivery. Kay equipped our team with the rituals, tooling, and confidence to keep iterating fast.',
-    name: 'Jordan Lee',
-    role: 'Head of Product · Guilded'
-  }
-];
+export type SystemLayer = {
+  name: string;
+  summary: string;
+  tech: string[];
+};
 
-export const contactChannels = [
-  {
-    label: 'Email',
-    value: 'hello@iamkay.dev',
-    href: 'mailto:hello@iamkay.dev'
-  },
-  {
-    label: 'Calendly',
-    value: 'Book a 30-min consult',
-    href: 'https://calendly.com/'
-  },
-  {
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/iamkay',
-    href: 'https://linkedin.com/in/iamkay'
-  }
-];
+export type FlagshipProject = {
+  title: string;
+  summary: string;
+  stack: string[];
+  deployment: string;
+  links: {
+    live?: string;
+    github?: string;
+    caseStudy?: string;
+  };
+};
+
+export type SocialLinks = {
+  github: string;
+  linkedin: string;
+  cv: string;
+  email: string;
+};
+
+export type QualityRequirement = {
+  label: string;
+  description: string;
+};
+
+export type PipelineVariable = {
+  key: string;
+  value: string;
+  description: string;
+};
+
+export type DeliveryPipeline = {
+  steps: string[];
+  buildCommand: string;
+  publishDirectory: string;
+  environmentVariables: PipelineVariable[];
+  dns: string;
+};
+
+export type PortfolioDocument = {
+  github: { username: string };
+  navigation: { label: string; hash: string }[];
+  hero: {
+    badge: string;
+    name: string;
+    title: string;
+    headline: string;
+    description: string;
+    avatarAlt: string;
+    avatarUrl?: string;
+    ctas: {
+      projects: HeroCta;
+      contact: HeroCta;
+      cv: HeroCta;
+    };
+  };
+  about: {
+    badge: string;
+    title: string;
+    summary: string;
+    highlights: Highlight[];
+  };
+  skills: {
+    badge: string;
+    title: string;
+    description: string;
+    categories: SkillCategory[];
+  };
+  systemOverview: {
+    badge: string;
+    title: string;
+    summary: string;
+    layers: SystemLayer[];
+  };
+  projects: {
+    badge: string;
+    title: string;
+    description: string;
+    flagship: FlagshipProject[];
+  };
+  contact: {
+    badge: string;
+    title: string;
+    summary: string;
+    buttonLabel: string;
+    email: string;
+    fallbackLabel: string;
+  };
+  delivery: {
+    badge: string;
+    title: string;
+    summary: string;
+    quality: QualityRequirement[];
+    pipeline: DeliveryPipeline;
+    futureEnhancements: string[];
+  };
+  social: SocialLinks;
+  footer: {
+    summary: string;
+  };
+  header: {
+    ctaLabel: string;
+  };
+};
+
+const doc = document as PortfolioDocument;
+
+export const githubUsername = import.meta.env.VITE_GITHUB_USER || doc.github.username;
+
+const normaliseHash = (hash: string) => (hash.startsWith('#') ? hash.slice(1) : hash);
+
+export const navLinks: SectionLink[] = doc.navigation.map((entry) => ({
+  label: entry.label,
+  path: `/#${normaliseHash(entry.hash)}`
+}));
+
+const avatarUrl = doc.hero.avatarUrl ?? `https://github.com/${githubUsername}.png`;
+
+export const heroContent = {
+  badge: doc.hero.badge,
+  name: doc.hero.name,
+  title: doc.hero.title,
+  headline: doc.hero.headline,
+  description: doc.hero.description,
+  avatarAlt: doc.hero.avatarAlt,
+  avatarUrl,
+  ctas: doc.hero.ctas
+};
+
+export const aboutContent = {
+  badge: doc.about.badge,
+  title: doc.about.title,
+  summary: doc.about.summary,
+  highlights: doc.about.highlights
+};
+
+export const skillsContent = {
+  badge: doc.skills.badge,
+  title: doc.skills.title,
+  description: doc.skills.description,
+  categories: doc.skills.categories
+};
+
+export const skillCategories: SkillCategory[] = skillsContent.categories;
+
+export const systemOverviewContent = {
+  badge: doc.systemOverview.badge,
+  title: doc.systemOverview.title,
+  summary: doc.systemOverview.summary,
+  layers: doc.systemOverview.layers
+};
+
+export const projectsContent = {
+  badge: doc.projects.badge,
+  title: doc.projects.title,
+  description: doc.projects.description
+};
+
+export const flagshipProjects: FlagshipProject[] = doc.projects.flagship;
+
+export const socialLinks: SocialLinks = doc.social;
+
+export const deliveryContent = {
+  badge: doc.delivery.badge,
+  title: doc.delivery.title,
+  summary: doc.delivery.summary,
+  quality: doc.delivery.quality,
+  pipeline: doc.delivery.pipeline,
+  futureEnhancements: doc.delivery.futureEnhancements
+};
+
+export const contactCopy = {
+  badge: doc.contact.badge,
+  title: doc.contact.title,
+  summary: doc.contact.summary,
+  buttonLabel: doc.contact.buttonLabel,
+  fallbackLabel: doc.contact.fallbackLabel,
+  fallbackMailto: doc.contact.email
+};
+
+export const footerCopy = doc.footer;
+
+export const headerContent = doc.header;

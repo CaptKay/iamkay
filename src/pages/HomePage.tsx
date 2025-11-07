@@ -1,17 +1,19 @@
+import { About } from '../sections/About';
 import { Contact } from '../sections/Contact';
 import { Hero } from '../sections/Hero';
-import { Process } from '../sections/Process';
 import { Projects } from '../sections/Projects';
-import { Services } from '../sections/Services';
-import { Testimonials } from '../sections/Testimonials';
+import { Skills } from '../sections/Skills';
+import { SystemOverview } from '../sections/SystemOverview';
+import { Delivery } from '../sections/Delivery';
 
 export const HomePage = () => (
   <main>
     <Hero />
-    <Services />
-    <Process />
+    <About />
+    <Skills />
+    <SystemOverview />
     <Projects />
-    <Testimonials />
+    <Delivery />
     <Contact />
   </main>
 );

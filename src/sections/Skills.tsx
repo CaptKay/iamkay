@@ -1,14 +1,13 @@
-import { skillCategories } from '../data/content';
+import { skillCategories, skillsContent } from '../data/content';
 
 export const Skills = () => {
+  const { badge, title, description } = skillsContent;
   return (
     <section id="skills" className="mx-auto mt-24 max-w-6xl px-6">
       <div className="space-y-4">
-        <p className="badge">Skills</p>
-        <h2 className="section-title">TypeScript-first delivery across the stack</h2>
-        <p className="section-subtitle">
-          A toolkit tuned for rapid iteration, reliable releases, and strong developer experience across frontend and backend workflows.
-        </p>
+        <p className="badge">{badge}</p>
+        <h2 className="section-title">{title}</h2>
+        <p className="section-subtitle">{description}</p>
       </div>
       <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {skillCategories.map((category) => (
