@@ -1,6 +1,6 @@
 {
   "github": {
-    "username": "kingsleykanu"
+    "username": "CaptKay"
   },
   "navigation": [
     { "label": "Home", "hash": "hero" },
@@ -23,7 +23,7 @@
       "contact": { "label": "Contact me", "href": "#contact" },
       "cv": {
         "label": "Download CV",
-        "href": "https://iamkay.eu/assets/kingsley-kanu-cv.pdf",
+        "href": "https://docs.google.com/document/d/15RHHhp2IpHa1DgQNy6pmwcbnl-4why6xnKxis6JIJtQ/edit?usp=sharing",
         "target": "_blank",
         "rel": "noreferrer"
       }
@@ -34,9 +34,9 @@
     "title": "Collaborative engineering leadership",
     "summary": "Kingsley is a pragmatic full-stack engineer with a product mindset, leading cross-functional squads from discovery to deployment. With a strong grasp of DevOps automation and UX collaboration, Kingsley builds systems that stay maintainable long after launch.",
     "highlights": [
-      { "label": "Location", "value": "Berlin, Germany · Remote across EU & UK" },
+      { "label": "Location", "value": "Amsterdam, The Netherlands · Remote across EU & UK" },
       { "label": "Specialty", "value": "React, Node.js & platform architecture" },
-      { "label": "Experience", "value": "9+ years | 30+ shipped products" }
+      { "label": "Experience", "value": "5+ years | 20+ shipped products" }
     ]
   },
   "skills": {
@@ -50,11 +50,11 @@
       },
       {
         "name": "Backend",
-        "items": ["Node.js", "Express", "GraphQL", "REST APIs", "PostgreSQL"]
+        "items": ["Node.js", "Express","Nest.js", "GraphQL", "REST APIs", "PostgreSQL"]
       },
       {
         "name": "Testing",
-        "items": ["Vitest", "Jest", "React Testing Library", "Cypress", "Playwright"]
+        "items": ["Vitest", "Jest", "React Testing Library", "Cypress", "Playwright", "Selenium"]
       },
       {
         "name": "Cloud",
@@ -62,42 +62,11 @@
       },
       {
         "name": "Tooling",
-        "items": ["Redux Toolkit", "GitHub Actions", "Storybook", "Zod", "Stripe SDK"]
+        "items": ["Redux Toolkit", "GitHub Actions", "Zod"]
       }
     ]
   },
-  "systemOverview": {
-    "badge": "Stack",
-    "title": "Architecture tuned for Netlify delivery",
-    "summary": "Kingsley packages iamkay.eu with a lean stack that pairs typed React components, automated deployments, and GitHub-powered data sources without paid infrastructure.",
-    "layers": [
-      {
-        "name": "Frontend",
-        "summary": "React 19, Vite, and TailwindCSS render an accessible single-page app with strict TypeScript coverage.",
-        "tech": ["React 19", "Vite", "TypeScript", "TailwindCSS"]
-      },
-      {
-        "name": "Backend (optional)",
-        "summary": "Netlify Functions running on Node 18 can proxy GitHub requests when rate limits require server-side caching.",
-        "tech": ["Netlify Functions", "Node 18"]
-      },
-      {
-        "name": "Hosting & CI",
-        "summary": "The free Netlify tier delivers SSL, edge caching, and CI/CD builds triggered on every GitHub push.",
-        "tech": ["Netlify", "Netlify CI/CD"]
-      },
-      {
-        "name": "Data source",
-        "summary": "GitHub REST API surfaces the latest repositories while filtering forks and archived work.",
-        "tech": ["GitHub REST API"]
-      },
-      {
-        "name": "Domain",
-        "summary": "Custom domain iamkay.eu is mapped via CNAME to the Netlify deployment for branded delivery.",
-        "tech": ["iamkay.eu"]
-      }
-    ]
-  },
+
   "projects": {
     "badge": "Projects",
     "title": "Production experience & live repositories",
@@ -178,60 +147,6 @@
       }
     ]
   },
-  "delivery": {
-    "badge": "Delivery",
-    "title": "Quality guardrails and deployment workflow",
-    "summary": "Operational expectations drawn from the Software Requirements Specification keep the portfolio fast, accessible, and reliable on the Netlify free tier.",
-    "quality": [
-      {
-        "label": "Performance",
-        "description": "Lighthouse ≥ 90 on desktop with optimised images and lightweight client bundles."
-      },
-      {
-        "label": "Accessibility",
-        "description": "WCAG 2.1 AA compliance with semantic structure, labelled controls, and focus-visible treatments."
-      },
-      {
-        "label": "SEO",
-        "description": "Metadata includes titles, descriptions, Open Graph tags, and favicon assets for social previews."
-      },
-      {
-        "label": "Security",
-        "description": "All traffic terminates over HTTPS via Netlify SSL with no frontend secrets stored in the bundle."
-      },
-      {
-        "label": "Maintainability",
-        "description": "Component-based React architecture with strict TypeScript keeps updates predictable."
-      },
-      {
-        "label": "Cost",
-        "description": "Runs entirely within Netlify’s free tier without external databases or paid services."
-      }
-    ],
-    "pipeline": {
-      "steps": [
-        "Push to GitHub → Netlify build trigger.",
-        "Netlify installs dependencies and executes npm run build.",
-        "Build artefacts in /dist deploy to the global edge with automatic SSL."
-      ],
-      "buildCommand": "npm run build",
-      "publishDirectory": "/dist",
-      "environmentVariables": [
-        {
-          "key": "GITHUB_USER",
-          "value": "kingsleykanu",
-          "description": "Configures the GitHub username used for the live repository feed."
-        }
-      ],
-      "dns": "CNAME → your-site-name.netlify.app"
-    },
-    "futureEnhancements": [
-      "Add Markdown/MDX blog for long-form engineering write-ups.",
-      "Ship dark mode persistence alongside analytics instrumentation (Plausible or Netlify Analytics).",
-      "Expose a \"Hire Me\" dashboard integrating a scheduling API.",
-      "Prototype AI-driven project scaffolding with OpenAI Codex or LangChain demos."
-    ]
-  },
   "contact": {
     "badge": "Contact",
     "title": "Ready to collaborate on your next release?",
@@ -241,9 +156,9 @@
     "fallbackLabel": "Reach Kingsley directly at"
   },
   "social": {
-    "github": "https://github.com/kingsleykanu",
-    "linkedin": "https://www.linkedin.com/in/kingsleykanu",
-    "cv": "https://iamkay.eu/assets/kingsley-kanu-cv.pdf",
+    "github": "https://github.com/CaptKay",
+    "linkedin": "https://www.linkedin.com/in/kingsley-kanu-o/",
+    "cv": "https://docs.google.com/document/d/15RHHhp2IpHa1DgQNy6pmwcbnl-4why6xnKxis6JIJtQ/edit?usp=sharing",
     "email": "mailto:contact@iamkay.eu"
   },
   "footer": {

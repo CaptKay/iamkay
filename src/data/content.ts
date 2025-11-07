@@ -143,7 +143,7 @@ export const navLinks: SectionLink[] = doc.navigation.map((entry) => ({
   path: `/#${normaliseHash(entry.hash)}`
 }));
 
-const avatarUrl = doc.hero.avatarUrl ?? `https://github.com/${githubUsername}.png`;
+const avatarUrl = doc.hero.avatarUrl ?? `https://avatars.githubusercontent.com/u/19250305?v=4`;
 
 export const heroContent = {
   badge: doc.hero.badge,
@@ -172,12 +172,6 @@ export const skillsContent = {
 
 export const skillCategories: SkillCategory[] = skillsContent.categories;
 
-export const systemOverviewContent = {
-  badge: doc.systemOverview.badge,
-  title: doc.systemOverview.title,
-  summary: doc.systemOverview.summary,
-  layers: doc.systemOverview.layers
-};
 
 export const projectsContent = {
   badge: doc.projects.badge,
@@ -189,14 +183,6 @@ export const flagshipProjects: FlagshipProject[] = doc.projects.flagship;
 
 export const socialLinks: SocialLinks = doc.social;
 
-export const deliveryContent = {
-  badge: doc.delivery.badge,
-  title: doc.delivery.title,
-  summary: doc.delivery.summary,
-  quality: doc.delivery.quality,
-  pipeline: doc.delivery.pipeline,
-  futureEnhancements: doc.delivery.futureEnhancements
-};
 
 export const contactCopy = {
   badge: doc.contact.badge,
