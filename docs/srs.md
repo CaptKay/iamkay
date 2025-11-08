@@ -96,7 +96,7 @@ Graceful fallback message if GitHub API limit is reached.
 ### 4.5 Contact
 - **Netlify Forms** (`form-name="contact"`, honeypot enabled).  
 - Inputs: *Name*, *Email*, *Message* (required).  
-- Success confirmation and fallback `mailto:contact@iamkay.eu`.
+- Success confirmation and fallback `mailto:suge.kanu@gmail.com`.
 
 ---
 
@@ -134,8 +134,8 @@ Graceful fallback message if GitHub API limit is reached.
 1. **Push to GitHub → Netlify build trigger.**  
 2. Build command: `npm run build`  
 3. Publish directory: `/dist`  
-4. **Environment Variables (Netlify):**  
-   - `GITHUB_USER=kingsleykanu`  
+4. **Environment Variables (Netlify):**
+   - `VITE_GITHUB_USER=CaptKay`
 5. **DNS Setup:**  
    - CNAME → `your-site-name.netlify.app`
 

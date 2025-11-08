@@ -53,7 +53,7 @@ export const Projects = () => {
                 You can still explore public work directly on GitHub while the live feed recovers.
               </p>
               <Button
-                href="https://github.com/kingsleykanu"
+                href={socialLinks.github}
                 variant="ghost"
                 className="mt-4 w-fit"
                 icon={<IconGithub className="h-4 w-4" />}

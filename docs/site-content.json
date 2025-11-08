@@ -78,7 +78,7 @@
         "stack": ["React", "Node.js", "Express", "MongoDB"],
         "deployment": "Netlify + Render",
         "links": {
-          "github": "https://github.com/kingsleykanu/authapp",
+          "github": "https://github.com/CaptKay/authapp",
           "live": "https://authapp.iamkay.eu",
           "caseStudy": "https://iamkay.eu/case-studies/authapp"
         }
@@ -89,7 +89,7 @@
         "stack": ["React", "Node.js", "MongoDB", "Stripe"],
         "deployment": "AWS Amplify",
         "links": {
-          "github": "https://github.com/kingsleykanu/syncskilled",
+          "github": "https://github.com/CaptKay/syncskilled",
           "live": "https://syncskilled.com",
           "caseStudy": "https://iamkay.eu/case-studies/syncskilled"
         }
@@ -100,7 +100,7 @@
         "stack": ["React", "TypeScript", "Tailwind CSS"],
         "deployment": "Netlify",
         "links": {
-          "github": "https://github.com/kingsleykanu/iamkay",
+          "github": "https://github.com/CaptKay/iamkay",
           "live": "https://iamkay.eu",
           "caseStudy": "https://iamkay.eu/case-studies/portfolio-core"
         }
@@ -111,7 +111,7 @@
         "stack": ["React", "Node.js", "REST API"],
         "deployment": "Render",
         "links": {
-          "github": "https://github.com/kingsleykanu/invoicelink-mini",
+          "github": "https://github.com/CaptKay/invoicelink-mini",
           "caseStudy": "https://iamkay.eu/case-studies/invoicelink-mini"
         }
       },
@@ -121,7 +121,7 @@
         "stack": ["React", "Express", "OpenAI API"],
         "deployment": "Netlify",
         "links": {
-          "github": "https://github.com/kingsleykanu/quicklinker",
+          "github": "https://github.com/CaptKay/quicklinker",
           "caseStudy": "https://iamkay.eu/case-studies/quicklinker"
         }
       },
@@ -131,7 +131,7 @@
         "stack": ["Vite", "TypeScript", "Axios"],
         "deployment": "Netlify",
         "links": {
-          "github": "https://github.com/kingsleykanu/api-visualizer",
+          "github": "https://github.com/CaptKay/api-visualizer",
           "live": "https://api-visualizer.iamkay.eu"
         }
       },
@@ -141,7 +141,7 @@
         "stack": ["React", "Zod"],
         "deployment": "Netlify",
         "links": {
-          "github": "https://github.com/kingsleykanu/form-validator-pro",
+          "github": "https://github.com/CaptKay/form-validator-pro",
           "live": "https://form-validator-pro.netlify.app"
         }
       }
@@ -152,14 +152,14 @@
     "title": "Ready to collaborate on your next release?",
     "summary": "Drop a message with your goals, timeline, and tech stack. You will hear back within two business days with a kickoff slot or clarifying questions.",
     "buttonLabel": "Send message",
-    "email": "contact@iamkay.eu",
+    "email": "suge.kanu@gmail.com",
     "fallbackLabel": "Reach Kingsley directly at"
   },
   "social": {
     "github": "https://github.com/CaptKay",
-    "linkedin": "https://www.linkedin.com/in/kingsley-kanu-o/",
-    "cv": "https://docs.google.com/document/d/15RHHhp2IpHa1DgQNy6pmwcbnl-4why6xnKxis6JIJtQ/edit?usp=sharing",
-    "email": "mailto:contact@iamkay.eu"
+    "linkedin": "https://www.linkedin.com/in/kingsleykanu",
+    "cv": "https://iamkay.eu/assets/kingsley-kanu-cv.pdf",
+    "email": "mailto:suge.kanu@gmail.com"
   },
   "footer": {
     "summary": "Built with Vite, React, TypeScript, and TailwindCSS. Deployed to the Netlify free tier."

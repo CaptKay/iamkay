@@ -33,10 +33,10 @@ A professional developer website for **Kingsley Kanu**, built as a React + TypeS
    npm install
    ```
 
-2. Set the GitHub username used for the live projects feed (defaults to `kingsleykanu`):
+2. Set the GitHub username used for the live projects feed (defaults to `CaptKay`):
 
    ```bash
-   echo "VITE_GITHUB_USER=kingsleykanu" > .env.local
+   echo "VITE_GITHUB_USER=CaptKay" > .env.local
    ```
 
    Any value defined in `.env`, `.env.local`, or Netlify environment variables will be picked up at build time.
@@ -62,7 +62,7 @@ A professional developer website for **Kingsley Kanu**, built as a React + TypeS
 - **Netlify configuration**
   - Build command: `npm run build`
   - Publish directory: `dist`
-  - Environment variables: `VITE_GITHUB_USER=kingsleykanu`
+  - Environment variables: `VITE_GITHUB_USER=CaptKay`
 - Enable Netlify Forms to capture submissions from the `<form name="contact">` element (honeypot included).
 - Custom domain: configure DNS for `iamkay.eu` to point to the generated Netlify site.
 
