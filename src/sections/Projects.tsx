@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { flagshipProjects, projectsContent, socialLinks } from '../data/content';
+import { flagshipProjects, projectsContent } from '../data/content';
 import { useAppDispatch } from '../hooks/useAppDispatch';
 import { useAppSelector } from '../hooks/useAppSelector';
 import { fetchRepositories } from '../app/githubSlice';
